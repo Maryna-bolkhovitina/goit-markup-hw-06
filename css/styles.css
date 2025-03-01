@@ -161,6 +161,8 @@ button {
     url(../images/hero/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  max-width: 1440px;
+  background-position: center;
 }
 .hero-title {
   font-weight: 700;
