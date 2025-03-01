@@ -404,5 +404,6 @@ button {
 
 .footer-content {
   display: flex;
+  align-items: baseline;
 }
 /* #endregion footer */
