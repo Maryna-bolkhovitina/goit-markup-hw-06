@@ -628,7 +628,7 @@ button {
 
 .user-comment:focus,
 .user-comment:hover {
-  border-color: 1px solid #4d5ae5;
+  border: 1px solid #4d5ae5;
 }
 
 .user-comment::placeholder {
