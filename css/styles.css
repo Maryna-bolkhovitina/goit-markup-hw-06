@@ -164,6 +164,7 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 1440px;
+  margin: 0 auto;
   background-position: center;
 }
 .hero-title {
@@ -468,13 +469,17 @@ button {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   padding: 72px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   height: 24px;
   width: 24px;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 0;
@@ -489,6 +494,7 @@ button {
 }
 .close-btn-icon {
   fill: #434455;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover,
@@ -509,7 +515,7 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-container-block {
@@ -518,7 +524,7 @@ button {
 .modal-form-label {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
@@ -528,13 +534,14 @@ button {
   position: relative;
 }
 .modal-form-input {
+  background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
   height: 40px;
   padding-left: 38px;
   outline: transparent;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus,
@@ -546,7 +553,7 @@ button {
   fill: #2e2f42;
   position: absolute;
   top: 50%;
-  left: 19px;
+  left: 16px;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -554,6 +561,10 @@ button {
 .modal-form-input:focus + .modal-form-icon,
 .modal-form-input:hover + .modal-form-icon {
   fill: #4d5ae5;
+}
+
+.modal-form-con-checkbox {
+  margin-bottom: 24px;
 }
 
 .custom-checkbox {
@@ -574,7 +585,7 @@ button {
 .label-checkbox {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   cursor: pointer;
@@ -591,10 +602,16 @@ button {
 .checkbox:checked + .label-checkbox .custom-checkbox {
   background-color: #404bbf;
   border: transparent;
-  fill: #ffffff;
+  fill: #f4f4fd;
+}
+
+.form-comment {
+  margin-bottom: 16px;
 }
 
 .user-comment {
+  background-color: transparent;
+  outline: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
@@ -602,12 +619,16 @@ button {
   padding: 8px 16px;
   outline: none;
   resize: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .user-comment:focus,
 .user-comment:hover {
-  border: 1px solid #4d5ae5;
+  border-color: 1px solid #4d5ae5;
 }
 
 .user-comment::placeholder {
@@ -621,7 +642,7 @@ button {
 .form-btn {
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
@@ -634,9 +655,8 @@ button {
   color: #fff;
   display: block;
   margin: 0 auto;
-  margin-top: 24px;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-btn:focus,
@@ -644,3 +664,4 @@ button {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #404bbf;
 }
+/* #endregion backdrop */
